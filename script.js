@@ -12,14 +12,14 @@ function populateTable(results) {
 	output.innerHTML='';
 
 	results.forEach((result) => { // you forgot to wrap result in parentheses
-		const Row=document.createElement('tr');
-		const idCell=document.createElement('td');
+		const row = document.createElement('tr');
+		const idCell = document.createElement('td');
 		idCell.textContent=`Promise ${result.id}`;
 		const timeCell=document.createElement('td');
 		timeCell.textContent=`${result.time.toFixed(2)} seconds`;
-		Row.appendChild(idCell);
-		Row.appendChild(timeCell);
-		output.appendChild(Row);
+		row.appendChild(idCell);
+		row.appendChild(timeCell);
+		output.appendChild(row);
 	});
 }
 
