@@ -35,7 +35,6 @@ const lodgingCell=document.createElement('td');
 	lodgingrow.appendChild(loadingCell);
 	output.appendChild(loadingrow)
 
-
 	const Promises=[
 		createPromise(1),
 		createPromise(2),
