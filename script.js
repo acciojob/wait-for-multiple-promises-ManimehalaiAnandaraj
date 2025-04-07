@@ -41,7 +41,7 @@ const loadingCell=document.createElement('td');
 		createPromise(3)
 	];
 
-	Promise.all(promises)
+	Promise.all(Promisesromises)
 		.then(results => {
 			results.sort((a,b) => a.id - b.id);
 			populateTable(results);
