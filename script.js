@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded',() => {
 
 	const output=document.getElementById('output');	
 	const loadingRow=document.createElement('tr');
+	loadingRow.id = 'loading'; // Assign the id 'loading' to the row
 	const loadingCell=document.createElement('td');
 	loadingCell.textContent='Loading...';
 	loadingCell.colSpan = 2;
