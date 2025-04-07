@@ -10,7 +10,7 @@ function createPromise(id) {
 function populateTable(results) {
 	const output=document.getElementById('output');
 	output.innerHTML='';
-
+let maxTime = 0;
 	results.forEach((result) => { // you forgot to wrap result in parentheses
 		const row = document.createElement('tr');
 		const idCell = document.createElement('td');
@@ -20,7 +20,22 @@ function populateTable(results) {
 		row.appendChild(idCell);
 		row.appendChild(timeCell);
 		output.appendChild(row);
+
+		  if (result.time > maxTime) {
+            maxTime = result.time;
+        }
 	});
+	
+	// Add a row for the total time
+    const totalRow = document.createElement('tr');
+    const totalCell = document.createElement('td');
+    totalCell.textContent = 'Total';
+    const totalTimeCell = document.createElement('td');
+    totalTimeCell.textContent = `${maxTime.toFixed(2)} seconds`;
+    totalRow.appendChild(totalCell);
+    totalRow.appendChild(totalTimeCell);
+    output.appendChild(totalRow);
+}
 }
 
 document.addEventListener('DOMContentLoaded',() => {
