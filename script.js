@@ -31,15 +31,15 @@ const output=document.getElementById('output');
 const lodgingrow=document.createElement('tr');
 const lodgingCell=document.createElement('td');
 	lodgingCell.textContent='Loading...';
-	lodgingCell.colSpan=2;
-	lodgingrow.appendChild(lodgingCell);
-	output.appendChild(lodgingrow)
+	lodgingCell.colSpan = 2;
+	lodgingrow.appendChild(loadingCell);
+	output.appendChild(loadingrow)
 
 
-	const Promise=[
-		createPromise(1);
-		createPromise(2);
-		createPromise(3);
+	const Promises=[
+		createPromise(1),
+		createPromise(2),
+		createPromise(3)
 	];
 
 	Promise.all(promises)
