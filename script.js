@@ -28,11 +28,11 @@ function populateTable(results) {
 document.addEventListener('DOMContentLoaded',() => {
 
 const output=document.getElementById('output');	
-const lodgingrow=document.createElement('tr');
-const lodgingCell=document.createElement('td');
-	lodgingCell.textContent='Loading...';
-	lodgingCell.colSpan = 2;
-	lodgingrow.appendChild(loadingCell);
+const loadingrow=document.createElement('tr');
+const loadingCell=document.createElement('td');
+	loadingCell.textContent='Loading...';
+	loadingCell.colSpan = 2;
+	loadingrow.appendChild(loadingCell);
 	output.appendChild(loadingrow)
 
 	const Promises=[
