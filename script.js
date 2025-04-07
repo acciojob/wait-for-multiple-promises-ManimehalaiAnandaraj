@@ -35,7 +35,7 @@ let maxTime = 0;
     totalRow.appendChild(totalCell);
     totalRow.appendChild(totalTimeCell);
     output.appendChild(totalRow);
-}
+
 }
 
 document.addEventListener('DOMContentLoaded',() => {
